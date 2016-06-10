@@ -1,0 +1,6 @@
+*.py[cod]
+.DS_Store
+*.pyc
+dist
+build
+__init__.py
