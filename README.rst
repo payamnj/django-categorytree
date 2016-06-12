@@ -21,7 +21,7 @@ How to use
 
 Import the Category abstract model from categorytree and use it to create your category model::
 
-    from lcategorytree.models import Category
+    from categorytree.models import Category
 
     class MyCategoryModel(Category):
         pass
