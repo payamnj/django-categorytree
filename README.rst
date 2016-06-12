@@ -27,7 +27,7 @@ Import the Category abstract model from categorytree and use it to create your c
         pass
     
 
-In your application admin.py file mport the CategoryAdmin abstract ModelAdmin class and use it to register your model to the admin site::
+In your application admin.py file import the CategoryAdmin abstract ModelAdmin class and use it to register your model to the admin site::
 
     from categorytree.admin import CategoryAdmin
 
