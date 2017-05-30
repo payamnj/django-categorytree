@@ -1,7 +1,5 @@
 from django.contrib import admin
 from .forms import CategoryForm, CategorySuperuserForm
-from test_app.models import TestCat
-
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['title', 'sub_categories', 'active']
