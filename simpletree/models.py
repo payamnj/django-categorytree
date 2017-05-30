@@ -19,7 +19,7 @@ class Node(models.Model):
         childs = type(self).objects.filter(parent=self)
         output = '<ul>'
         for child in childs:
-            subchilds = child.sub_categories()
+            subchilds = child.sub_nodes()
             url = reverse('admin:%s_%s_change' % (
                 self._meta.app_label.lower(),
                 self._meta.object_name.lower()), args=(child.id,))
