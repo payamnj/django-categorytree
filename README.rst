@@ -4,7 +4,8 @@ Django SimpleTree
 
 Django SimpleTree is a simple Django application that provides an abstract class to create tree style models. Using this model we can define unlimited subbranches only by using one model class. It also provides a Django admin abstract class which helps to have a tree-style list in the admin site.
 
-![Admin View](https://github.com/payamnj/django-simpletree/blob/master/imgs/admin.png?raw=true)
+.. image:: https://github.com/payamnj/django-simpletree/blob/master/imgs/admin.png?raw=true
+    :alt: Admin View
 
 
 Installation
