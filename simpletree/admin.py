@@ -1,19 +1,19 @@
 from django.contrib import admin
-from .forms import CategoryForm, CategorySuperuserForm
+from .forms import NodeForm, NodeSuperuserForm
 
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['title', 'sub_categories', 'active']
+class NodeAdmin(admin.ModelAdmin):
+    list_display = ['title', 'sub_nodes', 'active']
 
     def get_form(self, request, obj=None, **kwargs):
         if request.user.is_superuser:
-            kwargs['form'] = CategorySuperuserForm
+            kwargs['form'] = NodeSuperuserForm
         else:
-            kwargs['form'] = CategoryForm
+            kwargs['form'] = NodeForm
 
-        return super(CategoryAdmin, self).get_form(request, obj, **kwargs)
+        return super(NodeAdmin, self).get_form(request, obj, **kwargs)
 
     def get_queryset(self, request):
-        queryset = super(CategoryAdmin, self).get_queryset(request)
+        queryset = super(NodeAdmin, self).get_queryset(request)
 
         if request.path_info == '/admin/%s/%s/' % (
                 self.model._meta.app_label.lower(),

@@ -3,5 +3,5 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class CategorytreeConfig(AppConfig):
-    name = 'categorytree'
+class SimpleTreeConfig(AppConfig):
+    name = 'simpletree'

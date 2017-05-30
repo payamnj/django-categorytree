@@ -1,10 +1,10 @@
 from django import forms
 
 
-class CategoryForm(forms.ModelForm):
+class NodeForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
-        super(CategoryForm, self).__init__(*args, **kwargs)
+        super(NodeForm, self).__init__(*args, **kwargs)
         try:
             exclude_ids = [kwargs['instance'].id]
             exclude_ids += self.child_ids(kwargs['instance'])
@@ -29,6 +29,6 @@ class CategoryForm(forms.ModelForm):
         exclude = ('active',)
 
 
-class CategorySuperuserForm(CategoryForm):
+class NodeSuperuserForm(NodeForm):
     class Meta:
         fields = '__all__'

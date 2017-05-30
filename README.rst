@@ -1,38 +1,40 @@
 ========
-CategoryTree
+Django SimpleTree
 ========
 
-This is a simple Django apllication that provide an abstract class to create a tree style category model.
-Using this model we can define unlimited number of sublevel categories only by one model class.
+This is a simple Django apllication that provide an abstract class to create tree style models.
+Using this model we can define unlimited number of subbranches only by one model class.
+It also provides a django admin abstract class which helps to have a tree style list in the admin site.
+
 
 
 Installation
 ============
 Install the application package using pip::
 
-    pip install django-categorytree
+    pip install django-simpletree
 
 
 
-add 'categorytree' to the INSTALLED_APPS list on your settings file
+add 'simpletree' to the INSTALLED_APPS list on your settings file
 
 How to use
 ==========
 
-Import the Category abstract model from categorytree and use it to create your category model::
+Import the Node abstract model from simpletree and use it to create your tree style model::
 
-    from categorytree.models import Category
+    from simpletree.models import Node
 
-    class MyCategoryModel(Category):
+    class MyModel(Node):
         pass
     
 
-In your application admin.py file import the CategoryAdmin abstract ModelAdmin class and use it to register your model to the admin site::
+In your application admin.py file import the NodeAdmin abstract ModelAdmin class and use it to register your model to the admin site::
 
-    from categorytree.admin import CategoryAdmin
+    from simpletree.admin import NodeAdmin
 
 
-    class MyCategoryAdmin(CategoryAdmin):
+    class MyAdmin(NodeAdmin):
 
         class Meta:
-            model = MyCategoryModel
+            model = MyModel
