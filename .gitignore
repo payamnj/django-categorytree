@@ -3,4 +3,3 @@
 *.pyc
 dist
 build
-__init__.py

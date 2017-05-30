@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django_categorytree',
-    version='0.1',
+    version='0.1.2',
     description='A django app with an abstract model which helps \
 to define tree style categories with unlimited sub levels',
     url='https://github.com/payamnj/django-categorytree',
